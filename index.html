@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juba Skills Development Academy - Empowering Skills. Enabling Growth.</title>
+    <link rel="icon" type="image/png" href="static/logoblack.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,7 +14,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="https://via.placeholder.com/50x50/D4AF37/FFFFFF?text=JSDA" alt="JSDA Logo" class="logo-img">
+                <img src="static/logoblack.png" alt="JSDA Logo" class="logo-img">
                 <span class="logo-text">Juba Skills Development Academy</span>
             </div>
             <div class="nav-menu" id="nav-menu">
@@ -22,6 +23,7 @@
                 <a href="#programs" class="nav-link">Programmes</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#clients" class="nav-link">Clients</a>
+                <a href="https://jubaskills.pythonanywhere.com/auth/login" class="nav-link lms-link" target="_blank">LMS Portal</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="hamburger" id="hamburger">
@@ -66,8 +68,8 @@
                     </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://via.placeholder.com/600x500/F8F9FA/333333?text=Skills+Development" alt="Skills Development" class="hero-img">
+            <div class=\"hero-image\">
+                <img src=\"static/WhatsApp Image 2025-11-30 at 09.28.21_a15f2602.jpg\" alt=\"Skills Development\" class=\"hero-img\">
             </div>
         </div>
         <div class="scroll-indicator">
@@ -113,8 +115,8 @@
                     </div>
                 </div>
                 
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/500x400/F8F9FA/333333?text=Professional+Training" alt="Professional Training" class="about-img">
+                <div class=\"about-image\">
+                    <img src=\"static/WhatsApp Image 2025-11-30 at 09.28.21_a1cf3e01.jpg\" alt=\"Professional Training\" class=\"about-img\">
                 </div>
             </div>
             
@@ -157,6 +159,71 @@
                         <p>Building partnerships that drive progress.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team / Interns Gallery Section -->
+    <section id="team" class="team-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    Our Team in Action
+                </h2>
+                <p class="section-subtitle">Empowering the next generation of skilled professionals through hands-on training and mentorship.</p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="static/WhatsApp Image 2025-11-30 at 09.28.21_a15f2602.jpg" alt="Interns at training session" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <i class="fas fa-search-plus"></i>
+                            <p>Training in Progress</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="static/WhatsApp Image 2025-11-30 at 09.28.21_a1cf3e01.jpg" alt="Team collaboration" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <i class="fas fa-search-plus"></i>
+                            <p>Collaborative Learning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="static/WhatsApp Image 2025-11-30 at 09.28.21_c560a449.jpg" alt="Interns working together" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <div class="gallery-content">
+                            <i class="fas fa-search-plus"></i>
+                            <p>Skills Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section id="video" class="video-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-video"></i>
+                    See Us in Action
+                </h2>
+                <p class="section-subtitle">Watch our training programs and see how we're transforming lives through skills development.</p>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="video-container">
+                <video controls class="showcase-video" poster="static/WhatsApp Image 2025-11-30 at 09.28.21_a15f2602.jpg">
+                    <source src="static/WhatsApp Video 2025-11-30 at 09.28.54_35a1d96e.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
@@ -350,6 +417,24 @@
                     </div>
                 </div>
                 
+                <div class="partners-section">
+                    <h3>Our Valued Partners & Clients:</h3>
+                    <div class="partners-grid">
+                        <div class="partner-card">
+                            <i class="fas fa-leaf"></i>
+                            <span>Wealth Organic</span>
+                        </div>
+                        <div class="partner-card">
+                            <i class="fas fa-users"></i>
+                            <span>JCI</span>
+                        </div>
+                        <div class="partner-card">
+                            <i class="fas fa-university"></i>
+                            <span>Elangeni College</span>
+                        </div>
+                    </div>
+                </div>
+                
                 <p class="reputation-text">Our reputation is built on efficient delivery, transparent reporting, and measurable results.</p>
             </div>
         </div>
@@ -410,7 +495,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h4>Office Address</h4>
-                        <p>[Insert Physical Address]<br>KwaZulu-Natal, South Africa</p>
+                        <p>27 Magwaza Maphalala St, Greyville<br>Durban, 4001<br>KwaZulu-Natal, South Africa</p>
                     </div>
                     
                     <div class="contact-card">
@@ -418,7 +503,8 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h4>Email</h4>
-                        <p><a href="mailto:info@jubaskills.co.za">info@jubaskills.co.za</a></p>
+                        <p><a href="mailto:jubaskillsdev@gmail.com">jubaskillsdev@gmail.com</a><br>
+                        <a href="mailto:jubaskillscomm@gmail.com">jubaskillscomm@gmail.com</a></p>
                     </div>
                     
                     <div class="contact-card">
@@ -426,7 +512,7 @@
                             <i class="fas fa-phone"></i>
                         </div>
                         <h4>Phone</h4>
-                        <p><a href="tel:+27">+27 [insert number]</a></p>
+                        <p><a href="tel:+27683825733">068 382 5733</a></p>
                     </div>
                     
                     <div class="contact-card">
@@ -436,27 +522,6 @@
                         <h4>Website</h4>
                         <p><a href="https://www.jubaskills.co.za" target="_blank">www.jubaskills.co.za</a></p>
                     </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
                 </div>
             </div>
             
@@ -485,7 +550,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="https://via.placeholder.com/50x50/D4AF37/FFFFFF?text=JSDA" alt="JSDA Logo" class="footer-logo-img">
+                    <img src="static/logowhite.png" alt="JSDA Logo" class="footer-logo-img">
                     <span class="footer-logo-text">Juba Skills Development Academy</span>
                 </div>
                 <p class="footer-text">Empowering Skills. Enabling Growth. Accredited Excellence.</p>
