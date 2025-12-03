@@ -13,30 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close mobile menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        // Close menu on both click and touchend
-        const closeMenu = function(e) {
-            const href = this.getAttribute('href');
-            const target = this.getAttribute('target');
-            
-            // For external links and .html files, ensure they work properly
-            if (href && (href.startsWith('http') || href.endsWith('.html') || target === '_blank')) {
-                // Don't prevent default, let the browser handle it
-                // Still close the menu
-                setTimeout(() => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }, 100);
-            } else {
-                // Internal navigation - close menu with delay
-                setTimeout(() => {
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }, 150);
-            }
-        };
-        
-        link.addEventListener('click', closeMenu);
-        link.addEventListener('touchend', closeMenu, { passive: true });
+        // Only close menu on click, don't interfere with touch events
+        link.addEventListener('click', function() {
+            // Close menu after a small delay to allow navigation
+            setTimeout(() => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }, 150);
+        });
     });
     
     // Navbar scroll effect
@@ -111,41 +95,39 @@ document.addEventListener('DOMContentLoaded', function() {
     // Special handling for external navigation buttons (LMS, ICT Hub)
     const externalButtons = document.querySelectorAll('.nav-btn-lms, .nav-btn-ict');
     externalButtons.forEach(button => {
-        // Ensure these buttons always work on mobile
+        let touchHandled = false;
+        
+        // Visual feedback on touch
         button.addEventListener('touchstart', function(e) {
-            e.stopPropagation();
+            touchHandled = false;
             this.style.opacity = '0.8';
         }, { passive: true });
         
         button.addEventListener('touchend', function(e) {
-            e.stopPropagation();
             this.style.opacity = '1';
+            touchHandled = true;
             
-            // Get the href and simulate click if needed
             const href = this.getAttribute('href');
             const target = this.getAttribute('target');
             
-            if (href) {
-                // Close menu first
+            // Close menu
+            if (hamburger && navMenu) {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
-                
-                // Small delay then navigate
-                setTimeout(() => {
-                    if (target === '_blank') {
-                        window.open(href, '_blank');
-                    } else {
-                        window.location.href = href;
-                    }
-                }, 150);
             }
-        }, { passive: false });
+            
+            // Let the browser handle the navigation naturally
+            // Don't prevent default or manually navigate
+        }, { passive: true });
         
-        // Also handle regular clicks for desktop
+        // Don't interfere with clicks
         button.addEventListener('click', function(e) {
-            // On mobile, prevent default and handle via touch events
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
+            // Just close the menu, let the link work naturally
+            if (hamburger && navMenu) {
+                setTimeout(() => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }, 100);
             }
         });
     });
@@ -153,38 +135,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle division card links for mobile (LMS Portal, ICT Space Hub links)
     const cardLinks = document.querySelectorAll('.card-link');
     cardLinks.forEach(link => {
-        // Add touch support for mobile
+        // Add visual feedback on touch
         link.addEventListener('touchstart', function(e) {
             this.style.transform = 'translateX(3px)';
             this.style.opacity = '0.8';
         }, { passive: true });
         
         link.addEventListener('touchend', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
             this.style.transform = 'translateX(0)';
             this.style.opacity = '1';
-            
-            const href = this.getAttribute('href');
-            const target = this.getAttribute('target');
-            
-            // Navigate after visual feedback
-            setTimeout(() => {
-                if (target === '_blank') {
-                    window.open(href, '_blank', 'noopener,noreferrer');
-                } else {
-                    window.location.href = href;
-                }
-            }, 100);
-        }, { passive: false });
+            // Let the browser handle the navigation naturally
+        }, { passive: true });
         
-        // Handle regular clicks
-        link.addEventListener('click', function(e) {
-            // On mobile, let touchend handle it
-            if (window.innerWidth <= 768 && 'ontouchstart' in window) {
-                e.preventDefault();
+        // Don't interfere with clicks - let them work naturally
+    });
+    
+    // Force enable specific problematic links (LMS and ICT Hub)
+    const lmsLinks = document.querySelectorAll('a[href*="pythonanywhere.com"], a[href*="ict-space-hub.html"]');
+    lmsLinks.forEach(link => {
+        // Remove any event listeners that might interfere
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+        
+        // Add only essential handlers
+        newLink.addEventListener('click', function(e) {
+            // Close mobile menu if open
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             }
+            // Let the link work normally
         });
     });
     
