@@ -13,10 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close mobile menu when clicking on a link
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
+        // Close menu on both click and touchend
+        const closeMenu = function() {
+            // Small delay to allow navigation to complete
+            setTimeout(() => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }, 150);
+        };
+        
+        link.addEventListener('click', closeMenu);
+        link.addEventListener('touchend', closeMenu, { passive: true });
     });
     
     // Navbar scroll effect
@@ -45,26 +52,47 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        // Handle both click and touchstart for mobile compatibility
+        const handleNavigation = function(e) {
             const targetId = this.getAttribute('href');
+            const target = this.getAttribute('target');
             
-            // Don't prevent default for external links or .html files
-            if (targetId.startsWith('http') || targetId.endsWith('.html')) {
-                return;
+            // Allow external links and .html files to work normally
+            if (!targetId || 
+                targetId.startsWith('http') || 
+                targetId.startsWith('https') ||
+                targetId.endsWith('.html') ||
+                target === '_blank') {
+                // Let the browser handle these normally
+                return true;
             }
             
-            e.preventDefault();
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80;
+            // Only prevent default for internal hash links
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
                 
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 80;
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
             }
-        });
+        };
+        
+        link.addEventListener('click', handleNavigation);
+        // Add touch event for better mobile support
+        link.addEventListener('touchstart', function(e) {
+            // Mark that touch started on this element
+            this.dataset.touchStarted = 'true';
+        }, { passive: true });
     });
     
     // Active navigation link highlighting

@@ -889,6 +889,46 @@
     }
 }
 
+/* Mobile Click/Tap Fixes */
+.nav-link,
+.nav-btn-lms,
+.nav-btn-ict,
+.nav-cta {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+/* Ensure buttons are above other elements on mobile */
+@media (max-width: 768px) {
+    .nav-menu.active {
+        z-index: 999;
+    }
+    
+    .nav-link,
+    .nav-btn-lms,
+    .nav-btn-ict,
+    .nav-cta {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Increase touch target size on mobile */
+    .nav-menu a {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 20px;
+    }
+}
+
 /* ICT Hero Section */
 .ict-hero {
     background: linear-gradient(135deg, #001a33 0%, #003366 50%, #0052a3 100%);

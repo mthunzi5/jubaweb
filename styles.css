@@ -105,12 +105,22 @@ body {
     align-items: center;
     gap: 8px;
     box-shadow: 0 3px 10px rgba(0, 51, 102, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 102, 204, 0.3);
+    touch-action: manipulation;
+    position: relative;
+    z-index: 1;
 }
 
 .nav-btn-lms:hover {
     background: linear-gradient(135deg, #0066cc, #003366);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
+}
+
+.nav-btn-lms:active {
+    transform: scale(0.98);
 }
 
 .nav-btn-lms i {
@@ -127,12 +137,22 @@ body {
     align-items: center;
     gap: 8px;
     box-shadow: 0 3px 10px rgba(0, 200, 83, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 200, 83, 0.3);
+    touch-action: manipulation;
+    position: relative;
+    z-index: 1;
 }
 
 .nav-btn-ict:hover {
     background: linear-gradient(135deg, #00e676, #00c853);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 200, 83, 0.3);
+}
+
+.nav-btn-ict:active {
+    transform: scale(0.98);
 }
 
 .nav-btn-ict i {
@@ -1713,6 +1733,7 @@ section {
         backdrop-filter: blur(15px);
         max-height: calc(100vh - 75px);
         overflow-y: auto;
+        z-index: 999;
     }
     
     .nav-menu.active {
@@ -1720,11 +1741,17 @@ section {
     }
     
     .nav-menu a {
-        padding: 14px 20px;
-        display: block;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1rem;
         margin: 5px 20px;
         border-radius: 8px;
+        min-height: 50px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        touch-action: manipulation;
+        cursor: pointer;
     }
     
     .hamburger.active .bar:nth-child(2) {
