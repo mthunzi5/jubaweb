@@ -28,21 +28,21 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 51, 102, 0.2);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 75px;
 }
 
 .nav-logo {
@@ -75,36 +75,46 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 30px;
+    gap: 15px;
+    align-items: center;
 }
 
 .nav-link {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    font-size: 0.95rem;
     position: relative;
     transition: all 0.3s ease;
-    padding: 10px 0;
+    padding: 8px 16px;
+    border-radius: 6px;
 }
 
 .nav-link:hover {
     color: #003366;
-    transform: translateY(-2px);
+    background: rgba(0, 51, 102, 0.05);
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
+.nav-btn-lms {
     background: linear-gradient(135deg, #003366, #0066cc);
-    transition: width 0.3s ease;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 3px 10px rgba(0, 51, 102, 0.2);
 }
 
-.nav-link:hover::after {
-    width: 100%;
+.nav-btn-lms:hover {
+    background: linear-gradient(135deg, #0066cc, #003366);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
+}
+
+.nav-btn-lms i {
+    font-size: 0.8rem;
 }
 
 /* Hamburger Menu */
@@ -1041,6 +1051,378 @@ section {
     color: #999;
 }
 
+/* Testimonials Section */
+.testimonials {
+    background: white;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    border-top: 4px solid #003366;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 51, 102, 0.2);
+}
+
+.testimonial-avatar svg {
+    width: 100%;
+    height: 100%;
+}
+
+.quote-icon {
+    text-align: right;
+    color: #003366;
+    opacity: 0.2;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 25px;
+    min-height: 100px;
+}
+
+.testimonial-author {
+    margin-bottom: 15px;
+}
+
+.testimonial-author h4 {
+    font-size: 1.3rem;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.testimonial-role {
+    color: #0066cc;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.testimonial-rating i {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    background: #20ba56;
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 5px 30px rgba(37, 211, 102, 0.7);
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+    box-shadow: 0 5px 20px rgba(0, 51, 102, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #0066cc, #003366);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 51, 102, 0.5);
+}
+
+/* Tech Solutions Subsection within About */
+.tech-solutions-subsection {
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.tech-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.tech-description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.tech-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 3px solid #003366;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    border-top-color: #0066cc;
+}
+
+.tech-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #003366, #0066cc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover .tech-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.tech-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.tech-card h3 {
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.tech-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-section {
+    margin-top: 80px;
+}
+
+.projects-section h3 {
+    font-size: 2rem;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.project-card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #0066cc;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-left-color: #003366;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.project-header i {
+    font-size: 1.8rem;
+    color: #0066cc;
+}
+
+.project-header h4 {
+    font-size: 1.3rem;
+    color: #003366;
+    margin: 0;
+}
+
+.project-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 80px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-badge {
+    background: linear-gradient(135deg, #003366, #0066cc);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Future Vision */
+.future-vision {
+    background: linear-gradient(135deg, #003366, #0066cc);
+    border-radius: 20px;
+    padding: 60px;
+    color: white;
+    text-align: center;
+}
+
+.vision-icon {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.vision-icon i {
+    font-size: 3rem;
+    color: white;
+}
+
+.future-vision h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.future-vision p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vision-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.vision-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.vision-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.vision-item i {
+    font-size: 1.5rem;
+    color: #ffc107;
+}
+
+.vision-item span {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
 /* Team Gallery Section */
 .team-gallery {
     background: #fafafa;
@@ -1184,21 +1566,7 @@ section {
     font-size: 1.1rem;
 }
 
-/* LMS Link Styling */
-.lms-link {
-    background: linear-gradient(135deg, #003366, #0066cc);
-    color: white !important;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
 
-.lms-link:hover {
-    background: linear-gradient(135deg, #0066cc, #003366);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
-}
 
 /* Animations */
 @keyframes fadeIn {
@@ -1290,15 +1658,17 @@ section {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 80px;
+        top: 75px;
         flex-direction: column;
         background-color: rgba(255, 255, 255, 0.98);
         width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 40px 0;
-        backdrop-filter: blur(10px);
+        padding: 20px 0;
+        backdrop-filter: blur(15px);
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
     }
     
     .nav-menu.active {
@@ -1306,9 +1676,11 @@ section {
     }
     
     .nav-menu a {
-        padding: 15px;
+        padding: 14px 20px;
         display: block;
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin: 5px 20px;
+        border-radius: 8px;
     }
     
     .hamburger.active .bar:nth-child(2) {
@@ -1391,10 +1763,62 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .nav-menu .lms-link {
-        display: block;
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .vision-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .future-vision {
+        padding: 40px 25px;
+    }
+    
+    .nav-menu .nav-btn-lms {
+        justify-content: center;
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    .nav-container {
+        padding: 0 20px;
+        height: 70px;
+    }
+    
+    .nav-menu {
+        gap: 0;
+    }
+    
+    .nav-link {
+        padding: 12px 20px;
+        border-radius: 0;
+        width: 100%;
         text-align: center;
-        margin: 10px 0;
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+    }
+    
+    .back-to-top {
+        bottom: 85px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
     }
 }
 
@@ -1446,5 +1870,68 @@ section {
     .program-card,
     .service-item {
         padding: 25px;
+    }
+    
+    .tech-card {
+        padding: 30px 20px;
+    }
+    
+    .project-card {
+        padding: 25px 20px;
+    }
+    
+    .testimonial-card {
+        padding: 30px 20px;
+    }
+    
+    .future-vision {
+        padding: 30px 20px;
+    }
+    
+    .future-vision h3 {
+        font-size: 1.6rem;
+    }
+    
+    .future-vision p {
+        font-size: 1rem;
+    }
+    
+    .vision-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .vision-icon i {
+        font-size: 2rem;
+    }
+    
+    .tech-description {
+        font-size: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .video-container {
+        border-radius: 10px;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+        min-height: auto;
+    }
+    
+    .nav-logo {
+        gap: 10px;
+    }
+    
+    .logo-img {
+        height: 40px;
     }
 }
