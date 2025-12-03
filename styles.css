@@ -1979,3 +1979,385 @@ section {
         height: 40px;
     }
 }
+
+/* ========================================
+   ACADEMY HERO - PROFESSIONAL DESIGN
+   ======================================== */
+
+.academy-hero {
+    background: linear-gradient(135deg, #001a33 0%, #003366 50%, #004d99 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-particles-academy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.particle-academy {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: floatAcademy linear infinite;
+}
+
+@keyframes floatAcademy {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.academy-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    display: block;
+    text-align: center;
+    padding: 140px 40px 80px;
+}
+
+.academy-hero .hero-text {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.welcome-badge-academy {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.welcome-badge-academy i {
+    color: #F4E87C;
+}
+
+.hero-main-title-academy {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.typing-container-academy {
+    display: block;
+    color: #F4E87C;
+    min-height: 70px;
+}
+
+.typing-text-academy {
+    border-right: 3px solid #F4E87C;
+    padding-right: 8px;
+}
+
+.cursor-academy {
+    animation: blinkAcademy 0.7s infinite;
+    color: #F4E87C;
+}
+
+@keyframes blinkAcademy {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-tagline-academy {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+.hero-tagline-academy strong {
+    color: #F4E87C;
+    font-weight: 600;
+}
+
+/* Value Propositions */
+.value-props {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 50px 0;
+}
+
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.value-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.value-item i {
+    font-size: 2rem;
+    color: #F4E87C;
+    flex-shrink: 0;
+}
+
+.value-item strong {
+    display: block;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.value-item span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta-section {
+    margin: 60px 0;
+}
+
+.cta-heading {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.division-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.division-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: left;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.division-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.skills-card {
+    border-color: #0066cc;
+}
+
+.skills-card:hover {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(255, 255, 255, 0.95));
+}
+
+.ict-card {
+    border-color: #00c853;
+}
+
+.ict-card:hover {
+    background: linear-gradient(135deg, rgba(0, 200, 83, 0.1), rgba(255, 255, 255, 0.95));
+}
+
+.division-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.skills-card .division-icon {
+    color: #0066cc;
+}
+
+.ict-card .division-icon {
+    color: #00c853;
+}
+
+.division-card h4 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.division-card p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.card-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: rgba(0, 51, 102, 0.05);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #003366;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card-link:hover {
+    background: #003366;
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.skills-card .card-link:hover {
+    background: #0066cc;
+    border-color: #0066cc;
+}
+
+.ict-card .card-link:hover {
+    background: #00c853;
+    border-color: #00c853;
+}
+
+.card-link i {
+    font-size: 1.2rem;
+}
+
+/* Hero CTA Buttons */
+.hero-cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.btn-hero-primary,
+.btn-hero-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-primary {
+    background: linear-gradient(135deg, #F4E87C 0%, #D4AF37 100%);
+    color: #003366;
+    box-shadow: 0 10px 30px rgba(244, 232, 124, 0.3);
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(244, 232, 124, 0.4);
+}
+
+.btn-hero-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Responsive Academy Hero */
+@media (max-width: 768px) {
+    .hero-main-title-academy {
+        font-size: 2.2rem;
+    }
+    
+    .typing-container-academy {
+        min-height: 50px;
+    }
+    
+    .hero-tagline-academy {
+        font-size: 1rem;
+    }
+    
+    .value-props {
+        grid-template-columns: 1fr;
+    }
+    
+    .division-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .division-card {
+        padding: 30px;
+    }
+    
+    .hero-cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .academy-hero .hero-content {
+        padding: 120px 20px 60px;
+    }
+    
+    .hero-main-title-academy {
+        font-size: 1.8rem;
+    }
+    
+    .cta-heading {
+        font-size: 1.5rem;
+    }
+    
+    .division-card h4 {
+        font-size: 1.5rem;
+    }
+}

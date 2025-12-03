@@ -290,6 +290,22 @@
     background: rgba(0, 33, 66, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.ict-navbar .nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.ict-navbar .brand-logo {
+    height: 45px;
+    width: auto;
 }
 
 .brand-info {

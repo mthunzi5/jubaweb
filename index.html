@@ -65,36 +65,101 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-background"></div>
+    <section id="home" class="hero academy-hero">
+        <div class="hero-particles-academy"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line highlight">JUBA SKILLS DEVELOPMENT HOLDINGS</span>
-                    <span class="title-line">Empowering Skills.</span>
-                    <span class="title-line">Enabling Growth.</span>
+                <div class="welcome-badge-academy">
+                    <i class="fas fa-star"></i>
+                    <span>Welcome to Juba Skills Development Holdings</span>
+                </div>
+                
+                <h1 class="hero-main-title-academy">
+                    Transforming Futures Through
+                    <span class="typing-container-academy">
+                        <span id="typingTextAcademy" class="typing-text-academy"></span>
+                        <span class="cursor-academy">|</span>
+                    </span>
                 </h1>
-                <p class="hero-description">
-                    Welcome to Juba Skills Development Holdings - home to <strong>Juba Skills Development Academy</strong> for accredited training and <strong>ICT Space Hub</strong> for technology solutions. We're a comprehensive skills development and technology company based in South Africa.
+                
+                <p class="hero-tagline-academy">
+                    Welcome to <strong>Juba Skills Development Holdings</strong> - your trusted partner for comprehensive skills development and technology solutions in South Africa. We bring together accredited training excellence and innovative ICT capabilities under one roof.
                 </p>
-                <p class="hero-subtitle">
-                    We specialize in accredited training programmes, skills development consultancy, and comprehensive training project management for public and private sector clients across the country.
-                </p>
-                <p class="hero-mission">
-                    Whether you are a learner seeking qualifications, a company pursuing compliance, or a SETA implementing national training projects — Juba Skills Development Academy is your trusted partner for results-driven skills development.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#programs" class="btn btn-primary">
-                        <i class="fas fa-graduation-cap"></i>
-                        Explore Programmes
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
+                
+                <div class="value-props">
+                    <div class="value-item">
+                        <i class="fas fa-award"></i>
+                        <div>
+                            <strong>Accredited Excellence</strong>
+                            <span>SETA-approved training programmes</span>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>Proven Track Record</strong>
+                            <span>Thousands of learners empowered</span>
+                        </div>
+                    </div>
+                    <div class="value-item">
                         <i class="fas fa-handshake"></i>
-                        Partner with Us
+                        <div>
+                            <strong>Strategic Partnerships</strong>
+                            <span>Collaborating with leading organizations</span>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <strong>Technology Innovation</strong>
+                            <span>Cutting-edge ICT solutions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <h3 class="cta-heading">Explore Our Divisions</h3>
+                    <div class="division-cards">
+                        <div class="division-card skills-card">
+                            <div class="division-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Skills Development Academy</h4>
+                            <p>Accredited training, learnerships, and skills programmes for workforce development</p>
+                            <div class="card-links">
+                                <a href="#programs" class="card-link"><i class="fas fa-book"></i> View Programmes</a>
+                                <a href="#services" class="card-link"><i class="fas fa-briefcase"></i> Corporate Solutions</a>
+                                <a href="https://jubaskills.pythonanywhere.com/auth/login" target="_blank" class="card-link"><i class="fas fa-sign-in-alt"></i> LMS Portal</a>
+                            </div>
+                        </div>
+                        
+                        <div class="division-card ict-card">
+                            <div class="division-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4>ICT Space Hub</h4>
+                            <p>Innovative technology solutions, AI training, and custom software development</p>
+                            <div class="card-links">
+                                <a href="ict-space-hub.html#solutions" class="card-link"><i class="fas fa-lightbulb"></i> Our Solutions</a>
+                                <a href="ict-space-hub.html#training" class="card-link"><i class="fas fa-code"></i> Tech Training</a>
+                                <a href="ict-space-hub.html#projects" class="card-link"><i class="fas fa-project-diagram"></i> Our Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta-buttons">
+                    <a href="#contact" class="btn-hero-primary">
+                        <i class="fas fa-handshake"></i>
+                        Partner With Us
                     </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i>
-                        Get in Touch
+                    <a href="#about" class="btn-hero-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More About Us
+                    </a>
+                    <a href="#clients" class="btn-hero-secondary">
+                        <i class="fas fa-building"></i>
+                        Our Clients & Partners
                     </a>
                 </div>
             </div>
@@ -890,5 +955,65 @@
     </button>
 
     <script src="script.js"></script>
+    <script>
+    // Academy Hero Typing Animation
+    document.addEventListener('DOMContentLoaded', function() {
+        const typingText = document.getElementById('typingTextAcademy');
+        if (!typingText) return;
+        
+        const phrases = [
+            'Skills Development',
+            'Professional Training',
+            'Corporate Solutions',
+            'Technology Innovation',
+            'Career Empowerment'
+        ];
+        
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
+        
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 100;
+            }
+            
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typingSpeed = 2000;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typingSpeed = 500;
+            }
+            
+            setTimeout(type, typingSpeed);
+        }
+        
+        type();
+        
+        // Particle Animation for Academy
+        const particlesContainer = document.querySelector('.hero-particles-academy');
+        if (particlesContainer) {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle-academy';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+    });
+    </script>
 </body>
 </html>
