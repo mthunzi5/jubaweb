@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
             
-            // Don't prevent default for external links
-            if (targetId.startsWith('http')) {
+            // Don't prevent default for external links or .html files
+            if (targetId.startsWith('http') || targetId.endsWith('.html')) {
                 return;
             }
             
