@@ -149,6 +149,11 @@
                 </div>
                 
                 <div class="hero-cta-buttons">
+                    <button id="servicesModalBtn" class="btn-hero-featured">
+                        <i class="fas fa-briefcase"></i>
+                        View Our Complete Services
+                        <span class="btn-badge">New</span>
+                    </button>
                     <a href="#contact" class="btn-hero-primary">
                         <i class="fas fa-handshake"></i>
                         Partner With Us
@@ -944,6 +949,288 @@
         </div>
     </footer>
 
+    <!-- Services Modal -->
+    <div id="servicesModal" class="services-modal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>
+                    <i class="fas fa-briefcase"></i>
+                    Comprehensive Skills Development Services
+                </h2>
+                <button class="modal-close" id="modalClose" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="services-intro">
+                    <p class="intro-text">
+                        At <strong>Juba Skills Development Academy</strong>, we provide end-to-end skills development solutions tailored to your organization's needs. Our comprehensive suite of services ensures compliance, maximizes SETA funding opportunities, and drives meaningful workforce transformation.
+                    </p>
+                </div>
+
+                <div class="services-categories">
+                    <!-- Strategic Planning Services -->
+                    <div class="service-category">
+                        <div class="category-header">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Strategic Planning & Compliance</h3>
+                        </div>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                                <div class="service-content">
+                                    <h4>Workplace Skills Plan (WSP) Compilation & Submission</h4>
+                                    <p>We compile comprehensive annual Workplace Skills Plans for SETA submission based on your company's strategic objectives, workplace needs, and employee personal records. Our WSPs are designed to address critical scarce skills needs in your industry while ensuring alignment with Employment Equity (EE) and Broad-Based Black Economic Empowerment (BBBEE) requirements.</p>
+                                    <ul class="service-benefits">
+                                        <li><i class="fas fa-check-circle"></i> Strategic alignment with business objectives</li>
+                                        <li><i class="fas fa-check-circle"></i> EE and BBBEE integration</li>
+                                        <li><i class="fas fa-check-circle"></i> Industry-specific skills gap analysis</li>
+                                        <li><i class="fas fa-check-circle"></i> SETA compliance guarantee</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                                <div class="service-content">
+                                    <h4>Annual Training Report (ATR) Completion & Submission</h4>
+                                    <p>Accurate and timely ATR submissions to demonstrate training implementation and unlock mandatory grant benefits. We ensure your organization meets all SETA reporting requirements while maximizing grant recovery opportunities.</p>
+                                    <ul class="service-benefits">
+                                        <li><i class="fas fa-check-circle"></i> Accurate data compilation and verification</li>
+                                        <li><i class="fas fa-check-circle"></i> Mandatory grant optimization</li>
+                                        <li><i class="fas fa-check-circle"></i> Timely submission management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analysis & Assessment Services -->
+                    <div class="service-category">
+                        <div class="category-header">
+                            <i class="fas fa-search"></i>
+                            <h3>Analysis & Assessment</h3>
+                        </div>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-tasks"></i></div>
+                                <div class="service-content">
+                                    <h4>Training Needs Analysis (TNA) & Skills Audit</h4>
+                                    <p>We conduct comprehensive quarterly training needs analyses by liaising with line managers to identify skills gaps and training requirements. Our data-driven approach includes research on corporate performance, employee training needs, and career development opportunities to design effective, targeted training programmes.</p>
+                                    <ul class="service-benefits">
+                                        <li><i class="fas fa-check-circle"></i> Quarterly skills gap analysis</li>
+                                        <li><i class="fas fa-check-circle"></i> Line manager consultation and buy-in</li>
+                                        <li><i class="fas fa-check-circle"></i> Data-driven training programme design</li>
+                                        <li><i class="fas fa-check-circle"></i> Career development pathway mapping</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-user-check"></i></div>
+                                <div class="service-content">
+                                    <h4>Assessment & Moderation Services</h4>
+                                    <p>Professional assessment and moderation services ensuring quality assurance and compliance with QCTO and SETA requirements. Our qualified assessors and moderators maintain the highest standards of evaluation and certification.</p>
+                                    <ul class="service-benefits">
+                                        <li><i class="fas fa-check-circle"></i> QCTO-compliant assessment practices</li>
+                                        <li><i class="fas fa-check-circle"></i> External moderation services</li>
+                                        <li><i class="fas fa-check-circle"></i> Quality assurance protocols</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Implementation Services -->
+                    <div class="service-category">
+                        <div class="category-header">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Implementation & Management</h3>
+                        </div>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+                                <div class="service-content">
+                                    <h4>Project Management Services</h4>
+                                    <p>End-to-end project management for training initiatives, ensuring successful implementation of workplace skills plans, learnership programmes, and skills development projects. We handle all aspects from planning to reporting.</p>
+                                    <ul class="service-benefits">
+                                        <li><i class="fas fa-check-circle"></i> Full project lifecycle management</li>
+                                        <li><i class="fas fa-check-circle"></i> Stakeholder coordination</li>
+                                        <li><i class="fas fa-check-circle"></i> Risk management and mitigation</li>
+                                        <li><i class="fas fa-check-circle"></i> Monthly progress reporting</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="service-content">
+                                    <h4>Learnership Implementation & Management</h4>
+                                    <p>Complete learnership programme management from registration to completion. We assist companies in establishing and implementing learnerships, ensuring compliance with all SETA requirements while managing learner coaching, assessments, and certification.</p>
+                                    <ul class="service-benefits">
+                                        <li><i class="fas fa-check-circle"></i> Learnership programme design</li>
+                                        <li><i class="fas fa-check-circle"></i> SETA registration and compliance</li>
+                                        <li><i class="fas fa-check-circle"></i> Learner recruitment and placement</li>
+                                        <li><i class="fas fa-check-circle"></i> Ongoing coaching and support</li>
+                                        <li><i class="fas fa-check-circle"></i> Assessment coordination</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-users"></i></div>
+                                <div class="service-content">
+                                    <h4>Training Committee Establishment</h4>
+                                    <p>We assist organizations in establishing effective training committees that drive skills development initiatives and ensure alignment between business strategy and workforce development.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Training Delivery -->
+                    <div class="service-category">
+                        <div class="category-header">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Training Delivery</h3>
+                        </div>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                                <div class="service-content">
+                                    <h4>Entrepreneurship Skills Training</h4>
+                                    <p>Comprehensive entrepreneurship programmes designed to develop business acumen, innovation capabilities, and enterprise management skills. We empower individuals to start and grow successful businesses.</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-heart"></i></div>
+                                <div class="service-content">
+                                    <h4>Life Skills Training</h4>
+                                    <p>Essential life skills programmes covering communication, problem-solving, critical thinking, emotional intelligence, and workplace readiness. We prepare learners for success in both professional and personal contexts.</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                                <div class="service-content">
+                                    <h4>Learner Coaching Services</h4>
+                                    <p>Professional coaching support for learners throughout their training journey, ensuring engagement, progress tracking, and successful completion of qualifications.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Consulting & Advisory -->
+                    <div class="service-category">
+                        <div class="category-header">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Consulting & Advisory Services</h3>
+                        </div>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-award"></i></div>
+                                <div class="service-content">
+                                    <h4>Accreditation Consulting</h4>
+                                    <p>Expert guidance through the accreditation process for training providers seeking QCTO, SETA, or other regulatory body approvals. We navigate complex requirements to achieve and maintain accreditation status.</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-money-bill-wave"></i></div>
+                                <div class="service-content">
+                                    <h4>Discretionary Grants Advisory</h4>
+                                    <p>We advise and assist organizations in obtaining discretionary grants from SETAs by identifying funding opportunities, preparing compelling applications, and ensuring compliance with grant conditions. Our expertise maximizes your training investment returns.</p>
+                                    <ul class="service-benefits">
+                                        <li><i class="fas fa-check-circle"></i> Grant opportunity identification</li>
+                                        <li><i class="fas fa-check-circle"></i> Application preparation and submission</li>
+                                        <li><i class="fas fa-check-circle"></i> Compliance management</li>
+                                        <li><i class="fas fa-check-circle"></i> Reporting and claim submissions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-percentage"></i></div>
+                                <div class="service-content">
+                                    <h4>Tax Incentives Advisory</h4>
+                                    <p>Guidance on accessing tax incentives for training and employment programmes, including learnership tax allowances and other government incentives that reduce training costs.</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-bell"></i></div>
+                                <div class="service-content">
+                                    <h4>Industry Intelligence & Updates</h4>
+                                    <p>We keep your organization informed about industry-related changes, emerging training opportunities, special SETA grants, and regulatory updates. Stay ahead with our continuous monitoring and advisory services.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Systems & Compliance -->
+                    <div class="service-category">
+                        <div class="category-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Quality Systems & Compliance</h3>
+                        </div>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-file-contract"></i></div>
+                                <div class="service-content">
+                                    <h4>Quality Management Systems Development</h4>
+                                    <p>Development of comprehensive quality management systems including policy development, standard operating procedures, and compliance frameworks. We create robust systems that ensure training quality and regulatory compliance.</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-chart-bar"></i></div>
+                                <div class="service-content">
+                                    <h4>Monthly Training Reports</h4>
+                                    <p>Comprehensive monthly reporting on training activities, learner progress, budget utilization, and compliance status. Our detailed reports provide visibility and support data-driven decision-making.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Community Impact -->
+                    <div class="service-category">
+                        <div class="category-header">
+                            <i class="fas fa-hands-helping"></i>
+                            <h3>Community & Social Impact</h3>
+                        </div>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                                <div class="service-content">
+                                    <h4>Community Project Facilitation</h4>
+                                    <p>We facilitate community-based skills development projects that drive social impact and contribute to socio-economic development goals. Our community programmes create sustainable employment opportunities and support local economic growth.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <div class="footer-cta">
+                        <h3>Ready to Transform Your Workforce?</h3>
+                        <p>Partner with Juba Skills Development Academy for comprehensive, compliant, and effective skills development solutions.</p>
+                        <div class="footer-buttons">
+                            <a href="#contact" class="modal-btn-primary" id="modalContact">
+                                <i class="fas fa-phone"></i>
+                                Contact Us Today
+                            </a>
+                            <a href="#programs" class="modal-btn-secondary" id="modalPrograms">
+                                <i class="fas fa-graduation-cap"></i>
+                                View Our Programmes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/27683825733" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
@@ -1013,6 +1300,52 @@
                 particlesContainer.appendChild(particle);
             }
         }
+        
+        // Services Modal Functionality
+        const modal = document.getElementById('servicesModal');
+        const modalBtn = document.getElementById('servicesModalBtn');
+        const modalClose = document.getElementById('modalClose');
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalContact = document.getElementById('modalContact');
+        const modalPrograms = document.getElementById('modalPrograms');
+        
+        // Open modal
+        if (modalBtn) {
+            modalBtn.addEventListener('click', function() {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        
+        // Close modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        
+        if (modalClose) {
+            modalClose.addEventListener('click', closeModal);
+        }
+        
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', closeModal);
+        }
+        
+        // Close modal when clicking internal links
+        if (modalContact) {
+            modalContact.addEventListener('click', closeModal);
+        }
+        
+        if (modalPrograms) {
+            modalPrograms.addEventListener('click', closeModal);
+        }
+        
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
     });
     </script>
 </body>

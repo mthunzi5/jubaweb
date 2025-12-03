@@ -434,6 +434,461 @@
     }
 }
 
+/* ========================================
+   ICT HUB ENHANCED RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Desktop (1920px and up) */
+@media (min-width: 1920px) {
+    .hero-container {
+        max-width: 1600px;
+    }
+    
+    .hero-main-title {
+        font-size: 4.5rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.4rem;
+        max-width: 1000px;
+    }
+    
+    .hero-features {
+        gap: 40px;
+    }
+    
+    .ict-solutions .container,
+    .ict-training .container,
+    .projects-showcase .container {
+        max-width: 1600px;
+    }
+}
+
+/* Desktop (1200px - 1919px) */
+@media (min-width: 1200px) and (max-width: 1919px) {
+    .hero-main-title {
+        font-size: 3.8rem;
+    }
+    
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet Landscape (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    .ict-hero {
+        padding: 100px 25px 60px;
+    }
+    
+    .hero-main-title {
+        font-size: 3.2rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.15rem;
+    }
+    
+    .hero-features {
+        gap: 20px;
+    }
+    
+    .feature-item {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ict-navbar .brand-info {
+        display: flex;
+    }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .ict-hero {
+        padding: 110px 30px 60px;
+    }
+    
+    .hero-main-title {
+        font-size: 2.8rem;
+    }
+    
+    .typing-container {
+        min-height: 60px;
+    }
+    
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .hero-features {
+        gap: 18px;
+    }
+    
+    .hero-cta-group {
+        gap: 15px;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+    
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .solution-card,
+    .training-card,
+    .portfolio-card {
+        padding: 25px;
+    }
+    
+    .ict-navbar .brand-logo {
+        height: 42px;
+    }
+}
+
+/* Mobile Landscape (640px - 767px) */
+@media (min-width: 640px) and (max-width: 767px) {
+    .ict-hero {
+        padding: 100px 25px 55px;
+    }
+    
+    .hero-main-title {
+        font-size: 2.4rem;
+    }
+    
+    .typing-container {
+        min-height: 55px;
+    }
+    
+    .hero-tagline {
+        font-size: 1.05rem;
+    }
+    
+    .hero-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .welcome-badge {
+        font-size: 0.85rem;
+    }
+    
+    .solutions-grid,
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Portrait (481px - 639px) */
+@media (min-width: 481px) and (max-width: 639px) {
+    .ict-hero {
+        padding: 95px 22px 50px;
+    }
+    
+    .hero-main-title {
+        font-size: 2rem;
+    }
+    
+    .typing-container {
+        min-height: 50px;
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+    }
+    
+    .welcome-badge {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+    
+    .hero-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .feature-item {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+        padding: 14px 26px;
+    }
+    
+    .ict-navbar .brand-logo {
+        height: 40px;
+    }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+    .ict-navbar {
+        padding: 12px 0;
+    }
+    
+    .ict-navbar .brand-logo {
+        height: 38px;
+    }
+    
+    .ict-navbar .brand-name {
+        font-size: 0.95rem;
+    }
+    
+    .ict-navbar .brand-tagline {
+        font-size: 0.7rem;
+    }
+    
+    .ict-hero {
+        padding: 90px 18px 45px;
+    }
+    
+    .welcome-badge {
+        font-size: 0.8rem;
+        padding: 10px 18px;
+    }
+    
+    .hero-main-title {
+        font-size: 1.7rem;
+        margin-bottom: 25px;
+    }
+    
+    .typing-container {
+        min-height: 45px;
+        font-size: 1.7rem;
+    }
+    
+    .hero-tagline {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+    
+    .hero-features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 30px 0;
+    }
+    
+    .feature-item {
+        padding: 12px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .feature-item i {
+        font-size: 1.3rem;
+    }
+    
+    .hero-cta-group {
+        gap: 12px;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .scroll-indicator {
+        font-size: 0.85rem;
+        bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .solution-card,
+    .training-card,
+    .portfolio-card {
+        padding: 20px;
+    }
+    
+    .solution-icon,
+    .training-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Extra Small Mobile (320px and below) */
+@media (max-width: 320px) {
+    .ict-navbar .brand-logo {
+        height: 35px;
+    }
+    
+    .ict-navbar .brand-info {
+        display: none;
+    }
+    
+    .ict-hero {
+        padding: 85px 15px 40px;
+    }
+    
+    .hero-main-title {
+        font-size: 1.5rem;
+    }
+    
+    .typing-container {
+        font-size: 1.5rem;
+        min-height: 40px;
+    }
+    
+    .hero-tagline {
+        font-size: 0.9rem;
+    }
+    
+    .welcome-badge {
+        font-size: 0.75rem;
+        padding: 8px 15px;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Landscape Mode for ICT Hub */
+@media (max-height: 600px) and (orientation: landscape) {
+    .ict-hero {
+        padding: 80px 30px 30px;
+        min-height: auto;
+    }
+    
+    .hero-main-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .typing-container {
+        min-height: 35px;
+    }
+    
+    .hero-tagline {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .welcome-badge {
+        margin-bottom: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .hero-features {
+        margin: 20px 0;
+        gap: 15px;
+    }
+    
+    .hero-cta-group {
+        margin-top: 25px;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* Tablet Landscape Specific for ICT */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero-features {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* High DPI for ICT Hub */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ict-navbar .brand-logo {
+        image-rendering: -webkit-optimize-contrast;
+    }
+    
+    .particle {
+        width: 3px;
+        height: 3px;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) and (pointer: coarse) {
+    .cta-primary,
+    .cta-secondary,
+    .nav-cta {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .feature-item {
+        min-height: 44px;
+    }
+    
+    .solution-card,
+    .training-card,
+    .portfolio-card {
+        transition: none;
+    }
+    
+    .solution-card:active,
+    .training-card:active,
+    .portfolio-card:active {
+        transform: scale(0.98);
+    }
+}
+
 /* ICT Hero Section */
 .ict-hero {
     background: linear-gradient(135deg, #001a33 0%, #003366 50%, #0052a3 100%);
