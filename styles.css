@@ -1854,10 +1854,29 @@ section {
         padding: 40px 25px;
     }
     
-    .nav-menu .nav-btn-lms {
+    .nav-menu .nav-btn-lms,
+    .nav-menu .nav-btn-ict {
         justify-content: center;
-        width: 100%;
-        margin: 15px 0;
+        width: calc(100% - 40px);
+        margin: 15px 20px;
+        border-radius: 25px;
+        padding: 16px 20px;
+        min-height: 50px;
+        pointer-events: auto;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3);
+        touch-action: manipulation;
+        position: relative;
+        z-index: 10;
+    }
+    
+    .nav-menu .nav-btn-lms:active {
+        transform: scale(0.97);
+        opacity: 0.9;
+    }
+    
+    .nav-menu .nav-btn-ict:active {
+        transform: scale(0.97);
+        opacity: 0.9;
     }
     
     .nav-container {
@@ -1874,6 +1893,13 @@ section {
         border-radius: 0;
         width: 100%;
         text-align: center;
+    }
+    
+    /* Ensure buttons in mobile menu are clickable */
+    .nav-menu.active .nav-btn-lms,
+    .nav-menu.active .nav-btn-ict {
+        pointer-events: auto !important;
+        cursor: pointer !important;
     }
     
     .whatsapp-float {
@@ -2266,12 +2292,22 @@ section {
     font-weight: 500;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 102, 204, 0.2);
+    touch-action: manipulation;
+    position: relative;
+    min-height: 48px;
 }
 
 .card-link:hover {
     background: #003366;
     color: #fff;
     transform: translateX(5px);
+}
+
+.card-link:active {
+    transform: translateX(3px) scale(0.98);
+    opacity: 0.9;
 }
 
 .skills-card .card-link:hover {
