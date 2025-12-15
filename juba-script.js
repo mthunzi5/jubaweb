@@ -1,4 +1,4 @@
-// JUBA Consulting Homepage JavaScript
+// JUBA CONSULTANTS Homepage JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
