@@ -941,13 +941,13 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #F4E87C;
+    color: #333333;
     margin-bottom: 4px;
 }
 
 .email-group a {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: #1a1a1a;
     text-decoration: none;
     word-break: break-all;
     transition: all 0.3s ease;
@@ -955,7 +955,7 @@ body {
 }
 
 .email-group a:hover {
-    color: #F4E87C;
+    color: #D4AF37;
     padding-left: 8px;
     text-decoration: none;
 }
