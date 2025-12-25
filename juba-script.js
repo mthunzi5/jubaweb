@@ -1,4 +1,96 @@
 // JUBA CONSULTANTS Homepage JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Holiday balloons pop -> show modal
+    const balloons = ['holidayBalloon1', 'holidayBalloon2', 'holidayBalloon3', 'holidayBalloon4', 'holidayBalloon5'];
+    const modal = document.getElementById('holidayModal');
+    const backdrop = document.getElementById('holidayBackdrop');
+    const closeBtn = document.getElementById('holidayClose');
+    let starInterval;
+
+    function keyHandler(e) { if (e.key === 'Escape') closeModal(); }
+
+    function openModal() {
+        if (modal) modal.classList.add('active');
+        document.addEventListener('keydown', keyHandler);
+        // Start continuous star popping
+        starInterval = setInterval(createRandomBurst, 800);
+    }
+
+    function closeModal() {
+        if (modal) modal.classList.remove('active');
+        document.removeEventListener('keydown', keyHandler);
+        // Stop continuous star popping
+        if (starInterval) clearInterval(starInterval);
+        // Reset all balloons
+        balloons.forEach(id => {
+            const balloon = document.getElementById(id);
+            if (balloon) {
+                balloon.classList.remove('popped');
+                balloon.style.display = '';
+            }
+        });
+    }
+
+    function createBurst(originEl) {
+        const burst = document.createElement('div');
+        burst.className = 'burst';
+        const colors = ['#F4E87C','#FFD27A','#D4AF37','#fff'];
+        for (let i = 0; i < 15; i++) {
+            const s = document.createElement('span');
+            s.className = 'burst-star';
+            s.textContent = ['✦','✶','✷','❉','⭐'][i%5];
+            s.style.left = (20 + Math.random()*60) + '%';
+            s.style.top = (20 + Math.random()*60) + '%';
+            s.style.color = colors[i % colors.length];
+            s.style.transform = `translate(${(Math.random()-0.5)*300}px, ${(Math.random()-0.5)*300}px) rotate(${Math.random()*360}deg)`;
+            burst.appendChild(s);
+        }
+        document.body.appendChild(burst);
+        setTimeout(() => burst.remove(), 1500);
+    }
+
+    function createRandomBurst() {
+        // Create random bursts across the modal area
+        const burst = document.createElement('div');
+        burst.className = 'burst';
+        const colors = ['#F4E87C','#FFD27A','#D4AF37','#fff','#FFE4B5'];
+        for (let i = 0; i < 8; i++) {
+            const s = document.createElement('span');
+            s.className = 'burst-star';
+            s.textContent = ['✦','✶','✷','❉','⭐','✨'][i%6];
+            s.style.left = (10 + Math.random()*80) + '%';
+            s.style.top = (10 + Math.random()*80) + '%';
+            s.style.color = colors[i % colors.length];
+            s.style.transform = `translate(${(Math.random()-0.5)*400}px, ${(Math.random()-0.5)*400}px) rotate(${Math.random()*360}deg)`;
+            burst.appendChild(s);
+        }
+        document.body.appendChild(burst);
+        setTimeout(() => burst.remove(), 2000);
+    }
+
+    // Add event listeners for all balloons
+    balloons.forEach(id => {
+        const balloon = document.getElementById(id);
+        if (balloon) {
+            balloon.addEventListener('click', function() {
+                createBurst(balloon);
+                balloon.classList.add('popped');
+                setTimeout(() => { balloon.style.display = 'none'; }, 320);
+                setTimeout(openModal, 350);
+            });
+            balloon.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    balloon.click();
+                }
+            });
+        }
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', function(e){ if (e.target === backdrop) closeModal(); });
+    if (modal) modal.addEventListener('click', function(e){ if (e.target === modal) closeModal(); });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
