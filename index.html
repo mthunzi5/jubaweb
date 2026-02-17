@@ -14,11 +14,12 @@
     <meta property="og:title" content="JUBA CONSULTANTS - Skills, AI & Technology Solutions">
     <meta property="og:description" content="Empowering individuals, communities, and organizations through education, technology, and future-focused digital solutions">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="static/logoblack.png">
+    <meta property="og:image" content="static/jubacons.png">
     
-    <link rel="icon" type="image/png" href="static/logoblack.png">
+    <link rel="icon" type="image/png" href="static/jubacons.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="juba-styles.css">
+    <link rel="stylesheet" href="agent.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -27,13 +28,29 @@
     <nav class="navbar juba-navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="static/logoblack.png" alt="JUBA CONSULTANTS Logo" class="logo-img">
+                <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" class="logo-img">
                 <span class="logo-text">JUBA CONSULTANTS</span>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#divisions" class="nav-link">Our Divisions</a>
+                <div class="nav-dropdown">
+                    <a href="#divisions" class="nav-link dropdown-toggle">Our Divisions <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="skills-academy.html" class="dropdown-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Skills Development & Training</span>
+                        </a>
+                        <a href="ai-breakthrough.html" class="dropdown-item">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Breakthrough</span>
+                        </a>
+                        <a href="ict-space-hub.html" class="dropdown-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>ICT & Technology Solutions</span>
+                        </a>
+                    </div>
+                </div>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="hamburger" id="hamburger">
@@ -69,6 +86,44 @@
                         Empowering individuals, communities, and organizations through <strong>education</strong>, <strong>technology</strong>, and <strong>future-focused digital solutions</strong> in KwaZulu-Natal, South Africa.
                     </p>
                     <i class="fas fa-quote-right quote-icon-right"></i>
+                </div>
+                
+                <!-- What We Do Section -->
+                <div class="what-we-do-section">
+                    <h3 class="what-we-do-title">What We Do</h3>
+                    <div class="what-we-do-grid">
+                        <div class="what-we-do-card">
+                            <div class="card-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4>Programme Design & Implementation</h4>
+                            <p>We collaborate with you to identify key goals, target beneficiaries and measurable outcomes, then develop bespoke social investment strategies that align with your unique social impact mission and objectives, and efficiently implement your programme.</p>
+                        </div>
+                        
+                        <div class="what-we-do-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Measurement & Evaluation</h4>
+                            <p>We track the progress of projects and make informed decisions to improve. We create transparent reporting, programme evaluation and communications plans.</p>
+                        </div>
+                        
+                        <div class="what-we-do-card">
+                            <div class="card-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Develop Your Strategy</h4>
+                            <p>Know the problems that need addressing and what assets you have. Create a clear, deliberate vision and how it will be implemented.</p>
+                        </div>
+                        
+                        <div class="what-we-do-card">
+                            <div class="card-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4>Create a Plan</h4>
+                            <p>Build a considered plan for turning your strategy into practical action. It should be asset-based, evidence-based, time-bound and clearly articulated.</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Three Division Cards in Hero -->
@@ -320,7 +375,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="static/logowhite.png" alt="JUBA CONSULTANTS Logo" class="footer-logo-img">
+                    <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" class="footer-logo-img">
                     <span class="footer-logo-text">JUBA CONSULTANTS</span>
                 </div>
                 <p class="footer-tagline">Empowering Through Skills, AI & Technology</p>
@@ -350,5 +405,6 @@
 
     <script src="script.js"></script>
     <script src="juba-script.js"></script>
+    <script src="agent.js"></script>
 </body>
 </html>

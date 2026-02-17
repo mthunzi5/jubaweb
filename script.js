@@ -23,6 +23,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Mobile Dropdown Toggle
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const navDropdown = document.querySelector('.nav-dropdown');
+    
+    if (dropdownToggle && navDropdown) {
+        dropdownToggle.addEventListener('click', function(e) {
+            // Only toggle on mobile (when hamburger is visible)
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                navDropdown.classList.toggle('active');
+            }
+        });
+        
+        // Close dropdown when clicking dropdown items
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    setTimeout(() => {
+                        navDropdown.classList.remove('active');
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }, 150);
+                }
+            });
+        });
+    }
+    
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     let lastScrollTop = 0;
@@ -30,12 +58,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
+        // Keep white background, adjust shadow on scroll
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        
         if (scrollTop > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.12)';
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
+            navbar.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.08)';
         }
         
         // Hide/show navbar on scroll
