@@ -2174,7 +2174,12 @@ section {
    ======================================== */
 
 .academy-hero {
-    background: linear-gradient(135deg, #2F2F2F 0%, #D2B48C 50%, #E0C6A3 100%);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
+        url('static/jubaa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
 }

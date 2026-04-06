@@ -171,19 +171,17 @@ img.loaded {
 
 .hero-background-logo {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 1000px;
-    height: 80%;
-    background-image: url('static/jubacons.png');
-    background-size: contain;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('static/juba.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.5;
+    opacity: 1;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
 }
 
 .juba-hero::before {
@@ -194,8 +192,7 @@ img.loaded {
     right: 0;
     bottom: 0;
     background: 
-        radial-gradient(circle at 20% 50%, rgba(47, 47, 47, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(210, 180, 140, 0.08) 0%, transparent 50%);
+        linear-gradient(rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14));
     pointer-events: none;
     z-index: 1;
 }
@@ -251,6 +248,36 @@ img.loaded {
     letter-spacing: 2px;
     animation: none;
 }
+.about-intro-with-image {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+.about-intro-text .lead-text,
+.about-intro-text .mission-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 18px;
+}
+.about-intro-text .mission-text {
+    margin-bottom: 0;
+}
+.about-intro-image-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+}
+.about-intro-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+}
 
 .hero-typing-wrapper {
     display: flex;
@@ -293,10 +320,10 @@ img.loaded {
     max-width: 900px;
     margin: 0 auto 50px;
     padding: 30px 40px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    border: 2px solid rgba(210, 180, 140, 0.3);
+    border: 2px solid rgba(210, 180, 140, 0.45);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     position: relative;
 }
@@ -342,7 +369,8 @@ img.loaded {
 }
 
 .hero-division-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.32);
+    backdrop-filter: blur(6px);
     padding: 40px 30px;
     border-radius: 15px;
     text-decoration: none;
@@ -380,7 +408,7 @@ img.loaded {
 
 .skills-card:hover {
     border-color: #D2B48C;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.45);
     box-shadow: 0 20px 40px rgba(210, 180, 140, 0.15);
 }
 
@@ -390,7 +418,7 @@ img.loaded {
 
 .ai-card:hover {
     border-color: #2F2F2F;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.45);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -400,7 +428,7 @@ img.loaded {
 
 .ict-card:hover {
     border-color: #DADADA;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.45);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
@@ -1327,6 +1355,10 @@ img.loaded {
 
 /* Additional Tablet Breakpoint for Hero */
 @media (max-width: 1024px) {
+    .hero-background-logo {
+        background-position: center top;
+    }
+
     .hero-divisions-grid {
         grid-template-columns: 1fr;
         gap: 25px;
@@ -1350,10 +1382,10 @@ img.loaded {
 .what-we-do-section {
     margin-top: 50px;
     padding: 40px 30px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.35);
 }
 
 .what-we-do-title {
@@ -1372,12 +1404,13 @@ img.loaded {
 }
 
 .what-we-do-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(5px);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 .what-we-do-card:hover {
@@ -1417,6 +1450,17 @@ img.loaded {
 
 /* Mobile Responsive for What We Do */
 @media (max-width: 768px) {
+    .hero-background-logo {
+        background-position: center top;
+    }
+
+    .about-intro-with-image {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .about-intro-image {
+        min-height: 220px;
+    }
     .what-we-do-section {
         padding: 30px 20px;
         margin-top: 40px;
@@ -1446,6 +1490,17 @@ img.loaded {
 }
 
 @media (max-width: 480px) {
+    .hero-background-logo {
+        background-position: 58% top;
+    }
+
+    .about-intro-text .lead-text,
+    .about-intro-text .mission-text {
+        font-size: 1rem;
+    }
+    .about-intro-image {
+        min-height: 180px;
+    }
     .what-we-do-section {
         padding: 25px 15px;
     }
