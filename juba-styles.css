@@ -853,6 +853,27 @@ img.loaded {
     margin-bottom: 20px;
 }
 
+.ict-description-media {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.ict-description-media .division-description {
+    margin-bottom: 0;
+}
+
+.ict-card-image {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 14px;
+    object-fit: cover;
+    justify-self: end;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
 .division-features {
     list-style: none;
     padding: 0;
@@ -1284,6 +1305,16 @@ img.loaded {
     .email-group a {
         font-size: 0.85rem;
         word-break: break-word;
+    }
+
+    .ict-description-media {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .ict-card-image {
+        max-width: 100%;
+        justify-self: center;
     }
     
     /* Tablet Hero Adjustments */
