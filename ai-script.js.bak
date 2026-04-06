@@ -1,10 +1,9 @@
-// AI Breakthrough specific JavaScript - Optimized for Performance
+// AI Breakthrough specific JavaScript - BACKUP
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize animations
     initScrollAnimations();
-    // Mobile menu functionality
-    initMobileMenu();
+    // Quantum particles moved to CSS for better performance
 });
 
 // Scroll animations for sections with IntersectionObserver
@@ -31,27 +30,6 @@ function initScrollAnimations() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
-}
-
-// Mobile menu functionality
-function initMobileMenu() {
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close menu when clicking nav links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    }
 }
 
 // Debounce utility for performance
@@ -90,16 +68,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add parallax effect to hero with debouncing for performance
-const handleHeroParallax = debounce(() => {
+// Add parallax effect to hero with debouncing
+window.addEventListener('scroll', debounce(() => {
     const scrolled = window.pageYOffset;
     const aiHero = document.querySelector('.ai-hero');
     if (aiHero) {
         aiHero.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
-}, 16);
-
-window.addEventListener('scroll', handleHeroParallax, { passive: true });
+}, 16), { passive: true });
 
 // Pillar items hover effect
 document.querySelectorAll('.pillar-item').forEach(item => {

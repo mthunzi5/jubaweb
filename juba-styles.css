@@ -1285,6 +1285,17 @@ img.loaded {
         font-size: 0.85rem;
         word-break: break-word;
     }
+    
+    /* Tablet Hero Adjustments */
+    .hero-background-logo {
+        height: 500px;
+    }
+    
+    .hero-divisions-grid {
+        margin-top: 60px;
+        padding: 30px 0 0 0;
+        background: #ffffff;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1326,6 +1337,38 @@ img.loaded {
     }
     
     /* New Hero Responsive */
+    .juba-hero {
+        padding: 140px 20px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        min-height: auto;
+    }
+    
+    .hero-background-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 420px;
+        background-image: url('static/juba.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 1;
+        pointer-events: none;
+        z-index: 0;
+    }
+    
+    .hero-content-juba {
+        text-align: center;
+        color: #000000;
+        position: relative;
+        z-index: 2;
+        padding-bottom: 20px;
+    }
+    
     .hero-main-title-juba {
         font-size: 2rem;
     }
@@ -1342,10 +1385,21 @@ img.loaded {
     .hero-divisions-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        position: relative;
+        z-index: 3;
+        margin-top: 40px;
+        background: #ffffff;
+        padding: 30px 0 0 0;
     }
     
     .hero-mission-box {
         padding: 20px 25px;
+    }
+    
+    .hero-cta-buttons {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
     }
     
     .hero-mission-text {

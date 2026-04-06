@@ -1,4 +1,18 @@
 // JUBA CONSULTANTS Homepage JavaScript
+
+// Debounce utility function for scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
@@ -38,24 +52,31 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Navbar scroll effect
     const navbar = document.querySelector('.juba-navbar');
-    window.addEventListener('scroll', function() {
+    let lastScrollY = 0;
+    const handleNavbarScroll = debounce(function() {
+        const currentScrollY = window.scrollY;
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-    });
+        lastScrollY = currentScrollY;
+    }, 50);
+    
+    window.addEventListener('scroll', handleNavbarScroll, { passive: true });
     
     // Back to top button
     const backToTop = document.getElementById('backToTop');
     if (backToTop) {
-        window.addEventListener('scroll', function() {
+        const handleBackToTopScroll = debounce(function() {
             if (window.scrollY > 300) {
                 backToTop.classList.add('visible');
             } else {
                 backToTop.classList.remove('visible');
             }
-        });
+        }, 50);
+        
+        window.addEventListener('scroll', handleBackToTopScroll, { passive: true });
         
         backToTop.addEventListener('click', function() {
             window.scrollTo({

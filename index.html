@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="juba-styles.css">
     <link rel="stylesheet" href="agent.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="static/juba.png" as="image">
+    <link rel="preload" href="static/jubacons.png" as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -30,6 +32,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" class="logo-img">
+                style="height: 50px; width: auto; max-width: 150px; object-fit: contain;" loading="lazy"
                 <span class="logo-text">JUBA CONSULTANTS</span>
             </div>
             <div class="nav-menu" id="nav-menu">
@@ -202,6 +205,7 @@
                         </div>
                         <div class="about-intro-image-wrap">
                             <img src="static/juba.png" alt="JUBA CONSULTANTS team and brand image" class="about-intro-image">
+                style="width: 100%; height: auto; border-radius: 15px;" loading="lazy"
                         </div>
                     </div>
                     
@@ -384,6 +388,7 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" class="footer-logo-img">
+                loading="lazy"
                     <span class="footer-logo-text">JUBA CONSULTANTS</span>
                 </div>
                 <p class="footer-tagline">Empowering Through Skills, AI & Technology</p>
@@ -414,5 +419,6 @@
     <script src="script.js"></script>
     <script src="juba-script.js"></script>
     <script src="agent.js"></script>
+    <script src="performance.js" defer></script>
 </body>
 </html>
