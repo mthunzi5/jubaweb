@@ -903,6 +903,84 @@ section {
     font-size: 1.1rem;
     line-height: 1.6;
 }
+.learner-placement {
+    background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+}
+.placement-overview {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+.placement-copy,
+.placement-panel,
+.placement-card,
+.partner-requirements-card,
+.placement-partners-copy {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.placement-copy,
+.placement-panel,
+.placement-card,
+.partner-requirements-card,
+.placement-partners-copy {
+    padding: 32px;
+}
+.placement-copy p,
+.placement-partners-copy p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 16px;
+}
+.placement-panel h3,
+.placement-card h3,
+.placement-partners-copy h3,
+.partner-requirements-card h3 {
+    font-size: 1.45rem;
+    color: #2F2F2F;
+    margin-bottom: 18px;
+}
+.placement-checklist,
+.partner-requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.placement-checklist li,
+.partner-requirements-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #555;
+    line-height: 1.7;
+    padding: 10px 0;
+}
+.placement-checklist i {
+    color: #D2B48C;
+    margin-top: 4px;
+}
+.partner-requirements-list i {
+    color: #D2B48C;
+    margin-top: 5px;
+}
+.placement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-bottom: 35px;
+}
+.placement-card p {
+    color: #666;
+    line-height: 1.75;
+}
+.placement-partners {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+}
 
 /* Clients Section */
 .clients-content {
@@ -2093,6 +2171,23 @@ section {
     
     .project-management {
         padding: 30px;
+    }
+
+    .placement-overview,
+    .placement-partners {
+        grid-template-columns: 1fr;
+    }
+
+    .placement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .placement-copy,
+    .placement-panel,
+    .placement-card,
+    .partner-requirements-card,
+    .placement-partners-copy {
+        padding: 24px;
     }
     
     .contact-form {
