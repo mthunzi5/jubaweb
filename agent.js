@@ -88,7 +88,7 @@ class JubaAIAgent {
             },
             'company-profile': {
                 title: 'Company Profile',
-                content: 'JUBA CONSULTANTS is a black female-owned company in KZN specializing in skills development, AI innovation, and ICT solutions.',
+                content: 'JUBA CONSULTANTS is a company in KZN specializing in skills development, AI innovation, and ICT solutions.',
                 keywords: ['company', 'profile', 'about', 'black owned', 'female owned']
             }
         };
@@ -99,7 +99,7 @@ class JubaAIAgent {
             company: {
                 name: "JUBA CONSULTANTS",
                 fullName: "JUBA CONSULTANTS (Pty) Ltd",
-                type: "Black female-owned professional consulting company",
+                type: "Professional consulting company",
                 location: "KwaZulu-Natal, South Africa",
                 address: "27 Magwaza Maphalala St, Greyville, Durban, 4001",
                 mission: "Empowering individuals, communities, and organizations through education, technology, and future-focused digital solutions",
@@ -535,7 +535,7 @@ class JubaAIAgent {
         // About company
         if (intents.includes('about')) {
             return { 
-                text: `${sentimentPrefix}JUBA CONSULTANTS is a **black female-owned** professional consulting company based in **KwaZulu-Natal, South Africa**. 🇿🇦\n\nWe're not just another consulting firm - we're passionate about **empowering individuals, communities, and organizations** through three strategic divisions:\n\n1. **Skills Development & Training** - Accredited programmes and learnerships\n2. **AI Breakthrough** - Making artificial intelligence accessible to everyone\n3. **ICT & Technology Solutions** - Custom software and digital transformation\n\nOur mission is to drive socio-economic development and sustainable transformation through education and technology. What specific aspect would you like to explore?`,
+                text: `${sentimentPrefix}JUBA CONSULTANTS is a professional consulting company with a growing presence across Africa. 🌍\n\nWe're not just another consulting firm - we're passionate about **empowering individuals, communities, and organizations** through three strategic divisions:\n\n1. **Skills Development & Training** - Accredited programmes and learnerships\n2. **AI Breakthrough** - Making artificial intelligence accessible to everyone\n3. **ICT & Technology Solutions** - Custom software and digital transformation\n\nOur mission is to drive socio-economic development and sustainable transformation through education and technology. What specific aspect would you like to explore?`,
                 suggestions: ['Tell me about Skills Development', 'What AI services do you offer?', 'Show me ICT solutions']
             };
         }
@@ -566,7 +566,7 @@ class JubaAIAgent {
         // Ownership
         if (intents.includes('ownership')) {
             return { 
-                text: `${sentimentPrefix}JUBA CONSULTANTS is proudly a **black female-owned** enterprise! 🌟\n\nWe're committed to transformation, empowerment, and diversity in the South African business landscape. Our leadership brings passion, innovation, and a deep understanding of community needs to everything we do.\n\nAs a female-owned business, we're particularly passionate about empowering others through skills development, making technology accessible, and creating opportunities for growth. Would you like to know more about our work?`,
+                text: `${sentimentPrefix}JUBA CONSULTANTS is proudly a professional enterprise! 🌟\n\nWe're committed to transformation, empowerment, and diversity in the African business landscape. Our leadership brings passion, innovation, and a deep understanding of community needs to everything we do.\n\nWe're particularly passionate about empowering others through skills development, making technology accessible, and creating opportunities for growth. Would you like to know more about our work?`,
                 suggestions: ['Tell me about your mission', 'What services do you offer?', 'How do I work with you?']
             };
         }
