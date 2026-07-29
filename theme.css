@@ -613,7 +613,53 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 .project-card p { color: var(--color-ink-soft); font-size: 15px; margin-bottom: var(--space-4); }
 
 /* -------------------------------------------------------------------------
-   22. RESPONSIVE
+   22. PARTNER / HOST COMPANY BELT
+   ------------------------------------------------------------------------- */
+.partner-belt {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.partner-track {
+    display: flex;
+    align-items: center;
+    gap: var(--space-9);
+    width: max-content;
+    animation: partner-scroll 36s linear infinite;
+}
+.partner-belt:hover .partner-track { animation-play-state: paused; }
+.partner-tile { display: flex; align-items: center; justify-content: center; height: 64px; flex-shrink: 0; }
+.partner-tile img {
+    height: 100%;
+    max-height: 64px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: .65;
+    transition: filter .3s var(--ease), opacity .3s var(--ease);
+}
+.partner-tile img:hover { filter: grayscale(0); opacity: 1; }
+.partner-tile--text {
+    padding: 0 var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 13.5px;
+    letter-spacing: .02em;
+    color: var(--color-navy);
+    white-space: nowrap;
+}
+@keyframes partner-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .partner-track { animation: none; overflow-x: auto; }
+}
+
+/* -------------------------------------------------------------------------
+   23. RESPONSIVE
    ------------------------------------------------------------------------- */
 @media (max-width: 1080px) {
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
