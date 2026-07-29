@@ -5,461 +5,395 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JUBA CONSULTANTS - Empowering Through Skills, AI & Technology</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="JUBA CONSULTANTS - Professional consulting company delivering skills development, AI innovation, and ICT solutions across Africa.">
     <meta name="keywords" content="JUBA CONSULTANTS, skills development, artificial intelligence, AI solutions, ICT solutions, AFRICA, technology consulting">
     <meta name="author" content="JUBA CONSULTANTS">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="JUBA CONSULTANTS - Skills, AI & Technology Solutions">
     <meta property="og:description" content="Empowering individuals, communities, and organizations through education, technology, and future-focused digital solutions">
     <meta property="og:type" content="website">
     <meta property="og:image" content="static/jubacons.png">
-    
+
     <link rel="icon" type="image/png" href="static/jubacons.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="juba-styles.css">
-    <link rel="stylesheet" href="agent.css">
+    <link rel="stylesheet" href="theme.css">
     <link rel="preload" href="static/juba.png" as="image">
     <link rel="preload" href="static/jubacons.png" as="image">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!-- Navigation -->
-    <nav class="navbar juba-navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" class="logo-img" loading="lazy">
-                <span class="logo-text">JUBA CONSULTANTS</span>
-            </div>
+    <nav class="site-nav">
+        <div class="nav-row">
+            <a href="#home" class="nav-brand">
+                <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" loading="lazy">
+                <span class="nav-brand__text">JUBA CONSULTANTS</span>
+            </a>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#incubation" class="nav-link">Incubation</a>
                 <div class="nav-dropdown">
-                    <a href="#divisions" class="nav-link dropdown-toggle">Our Divisions <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="skills-academy.html" class="dropdown-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Skills Development & Training</span>
-                        </a>
-                        <a href="ai-breakthrough.html" class="dropdown-item">
-                            <i class="fas fa-brain"></i>
-                            <span>AI Breakthrough</span>
-                        </a>
-                        <a href="ict-space-hub.html" class="dropdown-item">
-                            <i class="fas fa-laptop-code"></i>
-                            <span>ICT & Technology Solutions</span>
-                        </a>
+                    <a href="#divisions" class="nav-link nav-dropdown__toggle">Our Divisions</a>
+                    <div class="nav-dropdown__panel">
+                        <a href="skills-academy.html" class="nav-dropdown__item">Skills Development & Training</a>
+                        <a href="ai-breakthrough.html" class="nav-dropdown__item">AI Breakthrough</a>
+                        <a href="ict-space-hub.html" class="nav-dropdown__item">ICT & Technology Solutions</a>
                     </div>
                 </div>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#incubation" class="nav-link">Incubation</a>
+                <div class="nav-cta"><a href="#contact" class="btn btn--sm">Contact Us</a></div>
             </div>
-            <div class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="juba-hero">
-        <div class="hero-background-logo"></div>
-        <div class="hero-container-juba">
-            <div class="hero-content-juba">
-                <div class="welcome-badge-juba">
-                    <i class="fas fa-award"></i>
-                    <span>PROFESSIONAL CONSULTANTS</span>
-                </div>
-                
-                <h1 class="hero-main-title-juba">
-                    JUBA CONSULTANTS
-                </h1>
-                
-                <div class="hero-typing-wrapper">
-                    <span class="hero-typing-prefix">Your Partner In</span>
-                    <span class="hero-typing-text" id="heroTyping"></span>
-                </div>
-                
-                <div class="hero-mission-box">
-                    <i class="fas fa-quote-left quote-icon-left"></i>
-                    <p class="hero-mission-text">
+    <main id="main">
+        <!-- Hero -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">Professional Consultants</span>
+                    <h1 class="hero-title">JUBA CONSULTANTS</h1>
+                    <p class="lead" style="margin-bottom: var(--space-5); color: var(--color-navy); font-weight: 600;">
+                        Your Partner In <span data-typing data-phrases="Skills Development|AI Innovation|Technology Solutions|Workforce Transformation|Digital Empowerment|Sustainable Growth"></span>
+                    </p>
+                    <p class="hero-lead">
                         Empowering individuals, communities, and organizations through <strong>education</strong>, <strong>technology</strong>, and <strong>future-focused digital solutions</strong> — with our work rooted and growing across Africa.
                     </p>
-                    <i class="fas fa-quote-right quote-icon-right"></i>
-                </div>
-                
-                <!-- What We Do Section -->
-                <div class="what-we-do-section">
-                    <h3 class="what-we-do-title">What We Do</h3>
-                    <div class="what-we-do-grid">
-                        <div class="what-we-do-card">
-                            <div class="card-icon">
-                                <i class="fas fa-project-diagram"></i>
-                            </div>
-                            <h4>Program Development & Execution</h4>
-                            <p>We partner with you to define strategic objectives, identify stakeholder groups, and establish clear success metrics. Together, we craft customized social investment approaches that reflect your organization's purpose and values, then execute your initiatives with precision.</p>
-                        </div>
-                        
-                        <div class="what-we-do-card">
-                            <div class="card-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <h4>Impact Assessment & Analysis</h4>
-                            <p>We monitor initiative performance and leverage data-driven insights to enhance outcomes. Our services include comprehensive reporting frameworks, impact assessments, and strategic communication blueprints.</p>
-                        </div>
-                        
-                        <div class="what-we-do-card">
-                            <div class="card-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <h4>Strategic Framework Development</h4>
-                            <p>Understand the challenges requiring action and identify your available resources. Establish a focused, intentional direction with a concrete implementation pathway.</p>
-                        </div>
-                        
-                        <div class="what-we-do-card">
-                            <div class="card-icon">
-                                <i class="fas fa-tasks"></i>
-                            </div>
-                            <h4>Action Plan Design</h4>
-                            <p>Develop a thoughtful framework that transforms your strategic vision into actionable steps. Our approach emphasizes resource optimization, data-driven decisions, defined timelines, and clear communication.</p>
-                        </div>
+                    <div class="btn-row">
+                        <a href="#about" class="btn">Learn More About Us</a>
+                        <a href="#contact" class="btn btn--outline">Get In Touch</a>
                     </div>
+                    <ul class="credibility-strip">
+                        <li>Durban, South Africa</li>
+                        <li>SETA-Accredited Training</li>
+                        <li>Growing Across Africa</li>
+                    </ul>
                 </div>
-                
-                <!-- Three Division Cards in Hero -->
-                <div class="hero-divisions-grid">
-                    <a href="skills-academy.html" class="hero-division-card skills-card">
-                        <div class="division-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Skills Development & Training</h3>
-                        <p>Accredited training programs, learnerships, and workforce transformation</p>
-                        <div class="card-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    
-                    <a href="ai-breakthrough.html" class="hero-division-card ai-card">
-                        <div class="division-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>AI Breakthrough</h3>
-                        <p>Making artificial intelligence accessible and applicable for everyone</p>
-                        <div class="card-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </a>
-                    
-                    <a href="ict-space-hub.html" class="hero-division-card ict-card">
-                        <div class="division-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>ICT & Technology Solutions</h3>
-                        <p>Custom software development, web solutions, and digital transformation</p>
-                        <div class="card-arrow">
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="hero-cta-buttons">
-                    <a href="#about" class="cta-btn-primary">
-                        <span>Learn More About Us</span>
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                    <a href="#contact" class="cta-btn-secondary">
-                        <span>Get In Touch</span>
-                        <i class="fas fa-envelope"></i>
-                    </a>
+                <div class="hero-media">
+                    <img src="static/juba.png" alt="JUBA CONSULTANTS team and brand image" loading="lazy" decoding="async">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="juba-about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-building"></i>
-                    About JUBA CONSULTANTS
-                </h2>
-                <div class="section-divider"></div>
+        <!-- Stats Band -->
+        <section class="stats-band">
+            <div class="container stats-grid">
+                <div class="stat">
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Strategic Divisions</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">4</div>
+                    <div class="stat-label">Core Company Values</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">4</div>
+                    <div class="stat-label">What-We-Do Focus Areas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">4</div>
+                    <div class="stat-label">Incubation Support Areas</div>
+                </div>
             </div>
-            
-            <div class="about-content-juba">
-                <div class="about-text">
-                    <div class="about-intro-with-image">
-                        <div class="about-intro-text">
-                            <p class="lead-text">
-                                <strong>JUBA CONSULTANTS</strong> is a professional consulting company with a growing presence across Africa. The company operates as a multidisciplinary enterprise delivering skills development, artificial intelligence innovation, and information and communication technology (ICT) solutions.
-                            </p>
-                            
-                            <p class="mission-text">
-                                JUBA CONSULTANTS is committed to <strong>empowering individuals, communities, and organizations</strong> through education, technology, and future-focused digital solutions that contribute to <strong>socio-economic development</strong> and <strong>sustainable transformation</strong>.
-                            </p>
-                        </div>
-                        <div class="about-intro-image-wrap">
-                            <img src="static/juba.png" alt="JUBA CONSULTANTS team and brand image" class="about-intro-image" loading="lazy" decoding="async">
-                        </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-grid reveal">
+                    <div class="about-copy">
+                        <span class="eyebrow">About Us</span>
+                        <h2 class="section-title" style="margin-bottom: var(--space-5);">About JUBA CONSULTANTS</h2>
+                        <p>
+                            <strong>JUBA CONSULTANTS</strong> is a professional consulting company with a growing presence across Africa. The company operates as a multidisciplinary enterprise delivering skills development, artificial intelligence innovation, and information and communication technology (ICT) solutions.
+                        </p>
+                        <p>
+                            JUBA CONSULTANTS is committed to <strong>empowering individuals, communities, and organizations</strong> through education, technology, and future-focused digital solutions that contribute to <strong>socio-economic development</strong> and <strong>sustainable transformation</strong>.
+                        </p>
                     </div>
-                    
-                    <div class="company-values">
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
-                            <h4>Innovation-Driven</h4>
-                            <p>Pioneering cutting-edge solutions in AI and technology</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-heart"></i></div>
-                            <h4>Community-Focused</h4>
-                            <p>Dedicated to socio-economic development and transformation</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <h4>Education-Centered</h4>
-                            <p>Empowering through knowledge and skills development</p>
-                        </div>
-                        <div class="value-card">
-                            <div class="value-icon"><i class="fas fa-globe"></i></div>
-                            <h4>Future-Ready</h4>
-                            <p>Preparing individuals and organizations for tomorrow</p>
-                        </div>
+                    <div class="about-media">
+                        <img src="static/juba.png" alt="JUBA CONSULTANTS team and brand image" loading="lazy" decoding="async">
+                    </div>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card reveal">
+                        <h4>Innovation-Driven</h4>
+                        <p>Pioneering cutting-edge solutions in AI and technology</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <h4>Community-Focused</h4>
+                        <p>Dedicated to socio-economic development and transformation</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <h4>Education-Centered</h4>
+                        <p>Empowering through knowledge and skills development</p>
+                    </div>
+                    <div class="value-card reveal">
+                        <h4>Future-Ready</h4>
+                        <p>Preparing individuals and organizations for tomorrow</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Divisions Section -->
-    <section id="divisions" class="juba-divisions">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-sitemap"></i>
-                    Our Strategic Divisions
-                </h2>
-                <p class="section-subtitle">Three specialized divisions working together to deliver comprehensive solutions</p>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="divisions-grid">
-                <!-- Division 1: Skills Development -->
-                <div class="division-block skills-division">
-                    <div class="division-header">
-                        <div class="division-number">01</div>
-                        <div class="division-icon-large">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                    </div>
-                    <div class="division-content">
+        <!-- Divisions -->
+        <section id="divisions" class="section section--grey">
+            <div class="container">
+                <div class="section-head section-head--center">
+                    <span class="eyebrow">Our Divisions</span>
+                    <h2 class="section-title">Our Strategic Divisions</h2>
+                    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Three specialized divisions working together to deliver comprehensive solutions</p>
+                    <hr class="rule" style="margin-left:auto;margin-right:auto;">
+                </div>
+
+                <div class="grid grid-3">
+                    <article class="card division-card reveal">
+                        <div class="division-num">01</div>
                         <h3>Juba Skills Development and Training</h3>
-                        <p class="division-description">
-                            Accredited training programmes, learnerships, and comprehensive skills development solutions. We empower individuals through SETA-approved qualifications and corporate training initiatives.
-                        </p>
-                        <ul class="division-features">
-                            <li><i class="fas fa-check-circle"></i> SETA-Accredited Programmes</li>
-                            <li><i class="fas fa-check-circle"></i> Learnerships & Skills Programmes</li>
-                            <li><i class="fas fa-check-circle"></i> Corporate Training Solutions</li>
-                            <li><i class="fas fa-check-circle"></i> Project Management Services</li>
+                        <p class="lead" style="font-size:15px;font-style:italic;margin-bottom:var(--space-4);">Accredited training programs, learnerships, and workforce transformation</p>
+                        <p>Accredited training programmes, learnerships, and comprehensive skills development solutions. We empower individuals through SETA-approved qualifications and corporate training initiatives.</p>
+                        <ul class="check-list">
+                            <li>SETA-Accredited Programmes</li>
+                            <li>Learnerships & Skills Programmes</li>
+                            <li>Corporate Training Solutions</li>
+                            <li>Project Management Services</li>
                         </ul>
-                        <a href="skills-academy.html" class="division-btn skills-btn">
-                            <span>Explore Skills Development</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+                        <a href="skills-academy.html" class="btn btn--outline btn--sm">Explore Skills Development</a>
+                    </article>
 
-                <!-- Division 2: AI Breakthrough -->
-                <div class="division-block ai-division">
-                    <div class="division-header">
-                        <div class="division-number">02</div>
-                        <div class="division-icon-large">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                    </div>
-                    <div class="division-content">
+                    <article class="card division-card reveal">
+                        <div class="division-num">02</div>
                         <h3>AI Breakthrough</h3>
-                        <p class="division-description">
-                            Innovation-driven division focused on introducing, simplifying, and applying Artificial Intelligence within communities and organizations. Making AI accessible and practical for everyone.
-                        </p>
-                        <ul class="division-features">
-                            <li><i class="fas fa-check-circle"></i> AI Education & Workshops</li>
-                            <li><i class="fas fa-check-circle"></i> Intelligent Web Applications</li>
-                            <li><i class="fas fa-check-circle"></i> AI Solution Development</li>
-                            <li><i class="fas fa-check-circle"></i> Quantum Computing Research</li>
+                        <p class="lead" style="font-size:15px;font-style:italic;margin-bottom:var(--space-4);">Making artificial intelligence accessible and applicable for everyone</p>
+                        <p>Innovation-driven division focused on introducing, simplifying, and applying Artificial Intelligence within communities and organizations. Making AI accessible and practical for everyone.</p>
+                        <ul class="check-list">
+                            <li>AI Education & Workshops</li>
+                            <li>Intelligent Web Applications</li>
+                            <li>AI Solution Development</li>
+                            <li>Quantum Computing Research</li>
                         </ul>
-                        <a href="ai-breakthrough.html" class="division-btn ai-btn">
-                            <span>Discover AI Innovation</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+                        <a href="ai-breakthrough.html" class="btn btn--outline btn--sm">Discover AI Innovation</a>
+                    </article>
 
-                <!-- Division 3: ICT Solutions -->
-                <div class="division-block ict-division">
-                    <div class="division-header">
-                        <div class="division-number">03</div>
-                        <div class="division-icon-large">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                    </div>
-                    <div class="division-content">
+                    <article class="card division-card reveal">
+                        <div class="division-num">03</div>
                         <h3>ICT and Technology Solutions</h3>
-                        <div class="ict-description-media">
-                            <p class="division-description">
-                                Comprehensive technology solutions including custom software development, web applications, mobile apps, and digital transformation services. Delivering enterprise-grade ICT solutions.
-                            </p>
-                            <img src="static/jubaa.png" alt="ICT and technology solutions visual" class="ict-card-image" loading="lazy" decoding="async">
+                        <p class="lead" style="font-size:15px;font-style:italic;margin-bottom:var(--space-4);">Custom software development, web solutions, and digital transformation</p>
+                        <div class="division-card__media">
+                            <img src="static/jubaa.png" alt="ICT and technology solutions visual" loading="lazy" decoding="async">
                         </div>
-                        <ul class="division-features">
-                            <li><i class="fas fa-check-circle"></i> Custom Software Development</li>
-                            <li><i class="fas fa-check-circle"></i> Web & Mobile Applications</li>
-                            <li><i class="fas fa-check-circle"></i> Digital Transformation</li>
-                            <li><i class="fas fa-check-circle"></i> Technology Training</li>
+                        <p>Comprehensive technology solutions including custom software development, web applications, mobile apps, and digital transformation services. Delivering enterprise-grade ICT solutions.</p>
+                        <ul class="check-list">
+                            <li>Custom Software Development</li>
+                            <li>Web & Mobile Applications</li>
+                            <li>Digital Transformation</li>
+                            <li>Technology Training</li>
                         </ul>
-                        <a href="ict-space-hub.html" class="division-btn ict-btn">
-                            <span>View ICT Solutions</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <a href="ict-space-hub.html" class="btn btn--outline btn--sm">View ICT Solutions</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Do -->
+        <section id="what-we-do" class="section">
+            <div class="container">
+                <div class="section-head section-head--center">
+                    <span class="eyebrow">Our Approach</span>
+                    <h2 class="section-title">What We Do</h2>
+                    <hr class="rule" style="margin-left:auto;margin-right:auto;">
+                </div>
+                <div class="grid grid-4">
+                    <div class="feature-card reveal">
+                        <h4>Program Development & Execution</h4>
+                        <p>We partner with you to define strategic objectives, identify stakeholder groups, and establish clear success metrics. Together, we craft customized social investment approaches that reflect your organization's purpose and values, then execute your initiatives with precision.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <h4>Impact Assessment & Analysis</h4>
+                        <p>We monitor initiative performance and leverage data-driven insights to enhance outcomes. Our services include comprehensive reporting frameworks, impact assessments, and strategic communication blueprints.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <h4>Strategic Framework Development</h4>
+                        <p>Understand the challenges requiring action and identify your available resources. Establish a focused, intentional direction with a concrete implementation pathway.</p>
+                    </div>
+                    <div class="feature-card reveal">
+                        <h4>Action Plan Design</h4>
+                        <p>Develop a thoughtful framework that transforms your strategic vision into actionable steps. Our approach emphasizes resource optimization, data-driven decisions, defined timelines, and clear communication.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="incubation" class="juba-incubation">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-seedling"></i>
-                    Business Incubation
-                </h2>
-                <p class="section-subtitle">We support emerging enterprises with practical incubation services that strengthen sustainability, readiness, and long-term growth.</p>
-                <div class="section-divider"></div>
-            </div>
-
-            <div class="incubation-intro-card">
-                <div class="incubation-intro-text">
-                    <p>
-                        At <strong>JUBA CONSULTANTS</strong>, business incubation is part of our wider mission to empower individuals, communities, and organizations through structured support, strategic guidance, and future-focused solutions. We work with startups, developing enterprises, and community-based businesses that need help moving from ideas into stable, investable, and operationally sound ventures.
-                    </p>
-                    <p>
-                        Our incubation support focuses on helping entrepreneurs build strong foundations, improve market readiness, strengthen internal systems, and adopt digital tools that improve visibility, efficiency, and service delivery. We combine business support with our strengths in skills development, project management, AI innovation, and ICT solutions.
-                    </p>
+        <!-- Business Incubation -->
+        <section id="incubation" class="section section--grey">
+            <div class="container">
+                <div class="section-head section-head--center">
+                    <span class="eyebrow">Business Incubation</span>
+                    <h2 class="section-title">Business Incubation</h2>
+                    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">We support emerging enterprises with practical incubation services that strengthen sustainability, readiness, and long-term growth.</p>
+                    <hr class="rule" style="margin-left:auto;margin-right:auto;">
                 </div>
-                <div class="incubation-side-panel">
-                    <div class="incubation-image-wrap">
-                        <img src="static/incu.png" alt="Business incubation support at JUBA CONSULTANTS" class="incubation-image" loading="lazy" decoding="async">
+
+                <div class="split-panel reveal">
+                    <div class="split-panel__copy">
+                        <p>
+                            At <strong>JUBA CONSULTANTS</strong>, business incubation is part of our wider mission to empower individuals, communities, and organizations through structured support, strategic guidance, and future-focused solutions. We work with startups, developing enterprises, and community-based businesses that need help moving from ideas into stable, investable, and operationally sound ventures.
+                        </p>
+                        <p>
+                            Our incubation support focuses on helping entrepreneurs build strong foundations, improve market readiness, strengthen internal systems, and adopt digital tools that improve visibility, efficiency, and service delivery. We combine business support with our strengths in skills development, project management, AI innovation, and ICT solutions.
+                        </p>
                     </div>
-                    <div class="incubation-highlight-box">
-                        <h3>What Our Incubation Support Covers</h3>
-                        <ul class="incubation-highlight-list">
-                            <li><i class="fas fa-check-circle"></i> Startup and small business readiness support</li>
-                            <li><i class="fas fa-check-circle"></i> Business model refinement and growth planning</li>
-                            <li><i class="fas fa-check-circle"></i> Compliance, documentation, and process improvement</li>
-                            <li><i class="fas fa-check-circle"></i> Digital enablement, systems setup, and market positioning</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="incubation-grid">
-                <article class="incubation-card">
-                    <div class="incubation-card-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h3>Enterprise Readiness</h3>
-                    <p>We help entrepreneurs clarify their offering, define target markets, shape practical business models, and prepare their operations for structured growth.</p>
-                </article>
-                <article class="incubation-card">
-                    <div class="incubation-card-icon"><i class="fas fa-sitemap"></i></div>
-                    <h3>Operational Structuring</h3>
-                    <p>We support businesses with planning frameworks, process design, project implementation structures, and the documentation needed to operate more effectively.</p>
-                </article>
-                <article class="incubation-card">
-                    <div class="incubation-card-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Digital Enablement</h3>
-                    <p>We strengthen incubated businesses through digital tools, websites, automation thinking, and technology-driven solutions that improve market access and delivery.</p>
-                </article>
-                <article class="incubation-card">
-                    <div class="incubation-card-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Growth Support</h3>
-                    <p>Our team helps businesses prepare for scale through mentoring, strategic planning, partnership readiness, and practical support aligned to sustainable transformation.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="juba-contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">
-                    <i class="fas fa-envelope"></i>
-                    Get in Touch
-                </h2>
-                <p class="section-subtitle">Let's discuss how JUBA CONSULTANTS can empower your organization</p>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <h4>Our Office</h4>
-                    <p>27 Magwaza Maphalala St<br>Greyville, Durban, 4001<br>KwaZulu-Natal, South Africa</p>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                    <h4>Call Us</h4>
-                    <p><a href="tel:+27683825733">068 382 5733</a></p>
-                </div>
-                
-                <div class="contact-card contact-card-email">
-                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                    <h4>Email Us</h4>
-                    <div class="email-list">
-                        <div class="email-group">
-                            <span class="email-label">General Inquiries</span>
-                            <a href="mailto:jubaskillsdev@gmail.com">jubaskillsdev@gmail.com</a>
-                            <a href="mailto:jubaskillscomm@gmail.com">jubaskillscomm@gmail.com</a>
+                    <div class="split-panel__aside">
+                        <div class="about-media">
+                            <img src="static/incu.png" alt="Business incubation support at JUBA CONSULTANTS" loading="lazy" decoding="async">
                         </div>
-                        <div class="email-group">
-                            <span class="email-label">Training Academy</span>
-                            <a href="mailto:jubaskillsdevelopment.trainingacademy@jubaconsultants.co.za">training.academy@jubaconsultants.co.za</a>
-                        </div>
-                        <div class="email-group">
-                            <span class="email-label">Director</span>
-                            <a href="mailto:sne.khathi@jubaconsultants.co.za">sne.khathi@jubaconsultants.co.za</a>
-                        </div>
-                        <div class="email-group">
-                            <span class="email-label">Technical Director</span>
-                            <a href="mailto:techdirector@jubaconsultants.co.za">techdirector@jubaconsultants.co.za</a>
+                        <div class="highlight-box">
+                            <h3>What Our Incubation Support Covers</h3>
+                            <ul class="check-list">
+                                <li>Startup and small business readiness support</li>
+                                <li>Business model refinement and growth planning</li>
+                                <li>Compliance, documentation, and process improvement</li>
+                                <li>Digital enablement, systems setup, and market positioning</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <div class="grid grid-4">
+                    <article class="card reveal">
+                        <h3 class="h4">Enterprise Readiness</h3>
+                        <p>We help entrepreneurs clarify their offering, define target markets, shape practical business models, and prepare their operations for structured growth.</p>
+                    </article>
+                    <article class="card reveal">
+                        <h3 class="h4">Operational Structuring</h3>
+                        <p>We support businesses with planning frameworks, process design, project implementation structures, and the documentation needed to operate more effectively.</p>
+                    </article>
+                    <article class="card reveal">
+                        <h3 class="h4">Digital Enablement</h3>
+                        <p>We strengthen incubated businesses through digital tools, websites, automation thinking, and technology-driven solutions that improve market access and delivery.</p>
+                    </article>
+                    <article class="card reveal">
+                        <h3 class="h4">Growth Support</h3>
+                        <p>Our team helps businesses prepare for scale through mentoring, strategic planning, partnership readiness, and practical support aligned to sustainable transformation.</p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-head section-head--center">
+                    <span class="eyebrow">Contact</span>
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Let's discuss how JUBA CONSULTANTS can empower your organization</p>
+                    <hr class="rule" style="margin-left:auto;margin-right:auto;">
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div>
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <h4>Our Office</h4>
+                                <p>27 Magwaza Maphalala St<br>Greyville, Durban, 4001<br>KwaZulu-Natal, South Africa</p>
+                            </div>
+                            <div class="contact-info-item">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+27683825733">068 382 5733</a></p>
+                            </div>
+                            <div class="contact-info-item">
+                                <h4>Email Us</h4>
+                                <div class="email-group">
+                                    <span>General Inquiries</span>
+                                    <a href="mailto:jubaskillsdev@gmail.com">jubaskillsdev@gmail.com</a>
+                                    <a href="mailto:jubaskillscomm@gmail.com">jubaskillscomm@gmail.com</a>
+                                </div>
+                                <div class="email-group">
+                                    <span>Training Academy</span>
+                                    <a href="mailto:jubaskillsdevelopment.trainingacademy@jubaconsultants.co.za">training.academy@jubaconsultants.co.za</a>
+                                </div>
+                                <div class="email-group">
+                                    <span>Director</span>
+                                    <a href="mailto:sne.khathi@jubaconsultants.co.za">sne.khathi@jubaconsultants.co.za</a>
+                                </div>
+                                <div class="email-group">
+                                    <span>Technical Director</span>
+                                    <a href="mailto:techdirector@jubaconsultants.co.za">techdirector@jubaconsultants.co.za</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-embed">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.6897534!2d31.0218!3d-29.8587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7aa5e6a0b0b0b%3A0x0!2s27%20Magwaza%20Maphalala%20St%2C%20Greyville%2C%20Durban%2C%204001!5e0!3m2!1sen!2sza!4v1234567890"
+                                width="100%"
+                                height="260"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="JUBA CONSULTANTS office location map">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="mailto:jubaskillsdev@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-field">
+                            <label for="cf-name">Name</label>
+                            <input type="text" id="cf-name" name="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-email">Email</label>
+                            <input type="email" id="cf-email" name="email" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-org">Organisation</label>
+                            <input type="text" id="cf-org" name="organisation">
+                        </div>
+                        <div class="form-field">
+                            <label for="cf-message">Message</label>
+                            <textarea id="cf-message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="juba-footer">
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" class="footer-logo-img" loading="lazy">
-                    <span class="footer-logo-text">JUBA CONSULTANTS</span>
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="static/jubacons.png" alt="JUBA CONSULTANTS Logo" loading="lazy">
+                        <span>JUBA CONSULTANTS</span>
+                    </div>
+                    <p class="footer-tagline">Empowering Through Skills, AI & Technology</p>
                 </div>
-                <p class="footer-tagline">Empowering Through Skills, AI & Technology</p>
-                <div class="footer-divisions">
-                    <a href="skills-academy.html" class="footer-link">Skills Development & Training</a>
-                    <span class="divider">|</span>
-                    <a href="ai-breakthrough.html" class="footer-link">AI Breakthrough</a>
-                    <span class="divider">|</span>
-                    <a href="ict-space-hub.html" class="footer-link">ICT & Technology Solutions</a>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#divisions">Our Divisions</a>
+                    <a href="#incubation">Incubation</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Divisions</h4>
+                    <a href="skills-academy.html">Skills Development & Training</a>
+                    <a href="ai-breakthrough.html">AI Breakthrough</a>
+                    <a href="ict-space-hub.html">ICT & Technology Solutions</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -468,18 +402,12 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/27683825733" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="float-stack">
+        <a href="https://wa.me/27683825733" class="float-btn float-btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">WhatsApp</a>
+        <button id="backToTop" class="float-btn float-btn--top" aria-label="Back to top">Top</button>
+    </div>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="juba-script.js"></script>
-    <script src="agent.js"></script>
+    <script src="site.js"></script>
     <script src="performance.js" defer></script>
 </body>
 </html>
